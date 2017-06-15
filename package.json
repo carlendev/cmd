@@ -1,0 +1,23 @@
+{
+  "name": "cmd",
+  "version": "1.0.0",
+  "description": "cmd",
+  "main": "client.js",
+  "scripts": {
+    "start": "bankai client.js -p 8080 --open",
+    "build:prod": "bankai build client.js dist/",
+    "lint": "standard --verbose | snazzy",
+    "test": "npm run lint"
+  },
+  "keywords": [],
+  "author": "Yann Carlen",
+  "license": "MIT",
+  "dependencies": {
+    "choo": "^4.1.0"
+  },
+  "devDependencies": {
+    "bankai": "^5.3.0",
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0"
+  }
+}
