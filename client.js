@@ -4,6 +4,7 @@ const app = choo()
 const title = 'CMD'
 
 sf('./assets/sakura.css', { global: true })
+sf('./assets/app.css', { global: true })
 
 app.model(require('./models/app'))
 
