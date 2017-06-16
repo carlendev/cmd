@@ -1,11 +1,11 @@
 const html = require('choo/html')
+const cmdInput= require('../elements/cmd-input')
 
 module.exports = (state, prev, send) => {
-  const updateInput = e => send('updateInput', { value: e.target.value })
   return html`
     <main>
       <h3>${state.title}</h3>
-      <input type="text" oninput=${updateInput} class="cmdInput"/>
+      ${cmdInput(send)}
     </main>
   `
 }
