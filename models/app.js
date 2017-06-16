@@ -5,9 +5,7 @@ module.exports = {
   },
   reducers: {
     /* synchronous operations that modify state. Triggered by actions. Signature of (data, state). */
-    update: function (state, data) {
-      return { title: data.value }
-    }
+    update: (state, data) => ({ title: data.value })
   },
   effects: {
     // asynchronous operations that don't modify state directly.

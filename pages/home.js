@@ -1,6 +1,7 @@
 const html = require('choo/html')
 
-module.exports = function (state, prev, send) {
+module.exports = (state, prev, send) => {
+  const update = e => send('update', { value: e.target.value })
   return html`
     <main>
       <h1>Hello, World!</h1>
@@ -10,8 +11,4 @@ module.exports = function (state, prev, send) {
       <input type="text" oninput=${update} />
     </main>
   `
-
-  function update (e) {
-    send('update', { value: e.target.value })
-  }
 }

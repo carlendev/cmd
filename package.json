@@ -13,7 +13,8 @@
   "author": "Yann Carlen",
   "license": "MIT",
   "dependencies": {
-    "choo": "^4.1.0"
+    "choo": "^4.1.0",
+    "sheetify": "^6.1.0"
   },
   "devDependencies": {
     "bankai": "^5.3.0",
