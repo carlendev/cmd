@@ -2,10 +2,26 @@ module.exports = {
   state: {
     /* initial values of state inside the model */
     // title: 'Set the title'
+    historyPos: 0,
+    cmdHistory: [],
+    cmdElements: []
   },
   reducers: {
     /* synchronous operations that modify state. Triggered by actions. Signature of (data, state). */
-    updateInput: (state, data) => ({ title: data.value })
+    enterInput: (state, data) => {
+      state.cmdHistory.push(data.value)
+      return ({ cmdHistory: state.cmdHistory })
+    },
+    updateInput: (_, data) => ({ title: data.value }),
+    increaseHistory: state => {
+      if (state.historyPos === state.cmdHistory.length - 1) return ({ historyPos: state.historyPos })
+      return ({ historyPos: ++state.historyPos })
+    },
+    resetHistory: state => ({ historyPos: state.historyPos = 0 }),
+    decreaseHistory: state => {
+      if (!state.historyPos) return ({ historyPos: state.historyPos })
+      return ({ historyPos: --state.historyPos })
+    }
   },
   effects: {
     // asynchronous operations that don't modify state directly.

@@ -8,7 +8,7 @@ sf('./assets/app.css', { global: true })
 
 app.model(require('./models/app'))
 
-app.router(['/', require('./pages/home')])
+app.router(['/', require('./pages/home')])  
 
 const tree = app.start()
 
