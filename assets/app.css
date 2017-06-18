@@ -1,3 +1,15 @@
-.cmdInput {
+#cmdInput {
     width: 100%;
+}
+
+#inputContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 38em;
+    margin: auto;
+}
+
+#cmdContainer {
+
 }

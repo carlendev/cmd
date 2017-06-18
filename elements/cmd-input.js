@@ -34,13 +34,13 @@ const cmdInput = (state, send) => {
   const onKeyUp = e => {
     const value = e.target.value
     if (e.keyCode === arrowUp) return historyUp(e, value)
-    if (e.keyCode == arrowDown) return historyDown(e, value)
+    if (e.keyCode === arrowDown) return historyDown(e, value)
     if (e.keyCode === enter) return send('enterInput', { value })
   }
 
   return html`
     <div>
-      <input type="text" oninput=${onInput} onkeypress=${onKeyUp} class="cmdInput"/>
+      <input type="text" oninput=${onInput} onkeypress=${onKeyUp} id="cmdInput" placeholder="Type here... " autofocus="true"/>
     </div>
   `
 }

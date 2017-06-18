@@ -5,10 +5,12 @@ module.exports = (state, prev, send) => {
   return html`
     <main>
       <h3>${state.title}</h3>
-      ${cmdInput(state, send)}
-      <ul>
-        ${state.cmdHistory.map(e => html`<li>${e}</li>`)}
-      </ul>
+      <div id="cmdContainer">
+        <ul>
+          ${state.cmdHistory.map(e => html`<li>${e}</li>`)}
+        </ul>
+      </div>
+      <div id="inputContainer">${cmdInput(state, send)}</div>
     </main>
   `
 }
