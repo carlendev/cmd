@@ -14,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "choo": "^4.1.0",
+    "littlelisp": "git+ssh://git@github.com/carlendev/littlelisp.git",
     "sheetify": "^6.1.0"
   },
   "devDependencies": {

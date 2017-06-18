@@ -3,6 +3,8 @@
 // We can use bel instead of choo/html to keep elements modular
 // and allow them to easily move outisde of the app.
 const html = require('bel')
+const { exec } = require('littlelisp')
+const { library } = require('../utils/lispLibrary')
 const enter = 13
 const arrowUp = 38
 const arrowDown = 40
@@ -40,7 +42,7 @@ const cmdInput = (state, send) => {
 
   return html`
     <div>
-      <input type="text" oninput=${onInput} onkeypress=${onKeyUp} id="cmdInput" placeholder="Type here... " autofocus="true"/>
+      <input type="text" oninput=${onInput} onkeypress=${onKeyUp} id="cmdInput" placeholder="Enter some lisp code... " autofocus="true"/>
     </div>
   `
 }

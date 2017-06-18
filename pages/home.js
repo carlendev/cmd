@@ -1,5 +1,6 @@
 const html = require('choo/html')
 const cmdInput= require('../elements/cmd-input')
+const { exec } = require('littlelisp')
 
 module.exports = (state, prev, send) => {
   return html`
